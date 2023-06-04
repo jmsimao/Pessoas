@@ -1,4 +1,4 @@
-package br.com.ifsp.Pessoas;
+package br.com.ifsp.Pessoas.Model;
 
 import java.util.UUID;
 
