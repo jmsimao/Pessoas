@@ -3,7 +3,7 @@ package br.com.ifsp.Pessoas.Model;
 import java.util.UUID;
 
 public class Pessoa {
-	private final int cod;
+	private int cod;
 	private String nome;
 	private String sobrenome;
 	private int idade;
@@ -22,6 +22,14 @@ public class Pessoa {
 	}
 
 	// Getters and setters
+	public int getCod() {
+		return this.cod;
+	}
+		
+	public void setCod(int cod) {
+		this.cod = cod;
+	}
+
 	public String getNome() {
 		return nome;
 	}
@@ -51,11 +59,7 @@ public class Pessoa {
 	}
 
 	public String getUuid() {
-		return uuid;
+		return this.uuid;
 	}
 
-	public int getCod() {
-		return cod;
-	}
-		
 }
