@@ -1,5 +1,6 @@
 package br.com.ifsp.Pessoas.Model;
 
+import java.util.List;
 import java.util.UUID;
 
 public class Pessoa {
@@ -9,15 +10,17 @@ public class Pessoa {
 	private int idade;
 	private String profissao;
 	private final String uuid;
+	private List<Telefone> telefone;
 	
 	// Constructor
-	public Pessoa(int cod, String nome, String sobrenome, int idade, String profissao) {
+	public Pessoa(int cod, String nome, String sobrenome, int idade, String profissao, List<Telefone> telefone) {
 		super();
 		this.cod = cod;
 		this.nome = nome;
 		this.sobrenome = sobrenome;
 		this.idade = idade;
 		this.profissao = profissao;
+		this.telefone = telefone;
 		this.uuid = UUID.randomUUID().toString();
 	}
 
@@ -60,6 +63,14 @@ public class Pessoa {
 
 	public String getUuid() {
 		return this.uuid;
+	}
+	
+	public List<Telefone> getTelefone() {
+		return this.telefone;
+	}
+
+	public void setTelefone(List<Telefone> telefone) {
+		this.telefone = telefone;
 	}
 
 }
